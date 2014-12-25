@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Sample" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" />
+  <xs:complexType name="ResultBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FilteredTotalRecords" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ResponseCodes" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultBase" nillable="true" type="tns:ResultBase" />
+  <xs:complexType name="ResultBaseOfBuildingDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BuildingDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q2:BuildingDto" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q3:ArrayOfBuildingDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfBuildingDtoD1Awih96" nillable="true" type="tns:ResultBaseOfBuildingDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfBuildingFacilityDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BuildingFacilityDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q4:BuildingFacilityDto" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q5:ArrayOfBuildingFacilityDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfBuildingFacilityDtoD1Awih96" nillable="true" type="tns:ResultBaseOfBuildingFacilityDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfBuildingListEntryDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BuildingListEntryDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q6:BuildingListEntryDto" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q7:ArrayOfBuildingListEntryDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfBuildingListEntryDtoD1Awih96" nillable="true" type="tns:ResultBaseOfBuildingListEntryDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfRoomDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RoomDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q8:RoomDto" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q9:ArrayOfRoomDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfRoomDtoD1Awih96" nillable="true" type="tns:ResultBaseOfRoomDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfRoomListEntryDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RoomListEntryDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q10:RoomListEntryDto" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q11:ArrayOfRoomListEntryDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfRoomListEntryDtoD1Awih96" nillable="true" type="tns:ResultBaseOfRoomListEntryDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfEventListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EventListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q12:EventListDto" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q13:ArrayOfEventListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfEventListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfEventListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfExamComponentDistrictListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamComponentDistrictListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q14:ExamComponentDistrictListDto" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q15:ArrayOfExamComponentDistrictListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamComponentDistrictListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfExamComponentDistrictListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfEventVenueListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EventVenueListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q16:EventVenueListDto" />
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q17:ArrayOfEventVenueListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfEventVenueListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfEventVenueListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfRoomListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RoomListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q18:RoomListDto" />
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q19:ArrayOfRoomListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfRoomListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfRoomListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfEventStaffAmountListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EventStaffAmountListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q20:EventStaffAmountListDto" />
+          <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q21:ArrayOfEventStaffAmountListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfEventStaffAmountListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfEventStaffAmountListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfExamStaffPlanningDistrictListDtoKl1Oxoi8">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffPlanningDistrictListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="Data" nillable="true" type="q22:ExamStaffPlanningDistrictListDto" />
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="DataList" nillable="true" type="q23:ArrayOfExamStaffPlanningDistrictListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffPlanningDistrictListDtoKl1Oxoi8" nillable="true" type="tns:ResultBaseOfExamStaffPlanningDistrictListDtoKl1Oxoi8" />
+  <xs:complexType name="ResultBaseOfVenueDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="VenueDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q24:VenueDto" />
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q25:ArrayOfVenueDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfVenueDtoD1Awih96" nillable="true" type="tns:ResultBaseOfVenueDtoD1Awih96" />
+  <xs:complexType name="ResultBaseOfExamStaffPlanningforAllocationDtoax311JHS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffPlanningforAllocationDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="Data" nillable="true" type="q26:ExamStaffPlanningforAllocationDto" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="DataList" nillable="true" type="q27:ArrayOfExamStaffPlanningforAllocationDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffPlanningforAllocationDtoax311JHS" nillable="true" type="tns:ResultBaseOfExamStaffPlanningforAllocationDtoax311JHS" />
+  <xs:complexType name="ResultBaseOfAvailableExamStaffListDtoax311JHS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AvailableExamStaffListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="Data" nillable="true" type="q28:AvailableExamStaffListDto" />
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="DataList" nillable="true" type="q29:ArrayOfAvailableExamStaffListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfAvailableExamStaffListDtoax311JHS" nillable="true" type="tns:ResultBaseOfAvailableExamStaffListDtoax311JHS" />
+  <xs:complexType name="ResultBaseOfAllocatedExamStaffListDtoax311JHS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AllocatedExamStaffListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="Data" nillable="true" type="q30:AllocatedExamStaffListDto" />
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="DataList" nillable="true" type="q31:ArrayOfAllocatedExamStaffListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfAllocatedExamStaffListDtoax311JHS" nillable="true" type="tns:ResultBaseOfAllocatedExamStaffListDtoax311JHS" />
+  <xs:complexType name="ResultBaseOfExamStaffDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q32:ExamStaffDto" />
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q33:ArrayOfExamStaffDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffListDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q34:ExamStaffListDto" />
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q35:ArrayOfExamStaffListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffListDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffListDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffFinanceDetailDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffFinanceDetailDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q36:ExamStaffFinanceDetailDto" />
+          <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q37:ArrayOfExamStaffFinanceDetailDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffFinanceDetailDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffFinanceDetailDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffContactDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffContactDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q38:ExamStaffContactDto" />
+          <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q39:ArrayOfExamStaffContactDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffContactDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffContactDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffTrainingAndCertificationDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffTrainingAndCertificationDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q40:ExamStaffTrainingAndCertificationDto" />
+          <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q41:ArrayOfExamStaffTrainingAndCertificationDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffTrainingAndCertificationDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffTrainingAndCertificationDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffCertificationAndDocumentDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffCertificationAndDocumentDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q42:ExamStaffCertificationAndDocumentDto" />
+          <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q43:ArrayOfExamStaffCertificationAndDocumentDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffCertificationAndDocumentDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffCertificationAndDocumentDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffSecurityClearanceDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffSecurityClearanceDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q44:ExamStaffSecurityClearanceDto" />
+          <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q45:ArrayOfExamStaffSecurityClearanceDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffSecurityClearanceDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffSecurityClearanceDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfExamStaffIdentificationDtoVroUBnlc">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamStaffIdentificationDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="Data" nillable="true" type="q46:ExamStaffIdentificationDto" />
+          <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="DataList" nillable="true" type="q47:ArrayOfExamStaffIdentificationDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamStaffIdentificationDtoVroUBnlc" nillable="true" type="tns:ResultBaseOfExamStaffIdentificationDtoVroUBnlc" />
+  <xs:complexType name="ResultBaseOfSampleDataDtoEPUl_Sq7M">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SampleDataDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Sample" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Sample" minOccurs="0" name="Data" nillable="true" type="q48:SampleDataDto" />
+          <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Sample" minOccurs="0" name="DataList" nillable="true" type="q49:ArrayOfSampleDataDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfSampleDataDtoEPUl_Sq7M" nillable="true" type="tns:ResultBaseOfSampleDataDtoEPUl_Sq7M" />
+  <xs:complexType name="ResultBaseOfExamRoleProfileListDtoe6nMv2Ao">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExamRoleProfileListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="Data" nillable="true" type="q50:ExamRoleProfileListDto" />
+          <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="DataList" nillable="true" type="q51:ArrayOfExamRoleProfileListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfExamRoleProfileListDtoe6nMv2Ao" nillable="true" type="tns:ResultBaseOfExamRoleProfileListDtoe6nMv2Ao" />
+  <xs:complexType name="ResultBaseOfCountryExamRoleListDtoe6nMv2Ao">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CountryExamRoleListDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="Data" nillable="true" type="q52:CountryExamRoleListDto" />
+          <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="DataList" nillable="true" type="q53:ArrayOfCountryExamRoleListDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfCountryExamRoleListDtoe6nMv2Ao" nillable="true" type="tns:ResultBaseOfCountryExamRoleListDtoe6nMv2Ao" />
+  <xs:complexType name="ResultBaseOfVenueListEntryDtoD1Awih96">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResultBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="VenueListEntryDto" Namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResultBase">
+        <xs:sequence>
+          <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="Data" nillable="true" type="q54:VenueListEntryDto" />
+          <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="DataList" nillable="true" type="q55:ArrayOfVenueListEntryDto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultBaseOfVenueListEntryDtoD1Awih96" nillable="true" type="tns:ResultBaseOfVenueListEntryDtoD1Awih96" />
+</xs:schema>

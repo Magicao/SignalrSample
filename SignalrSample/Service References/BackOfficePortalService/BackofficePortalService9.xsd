@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SearchEventDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" base="q1:SearchBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivityStatusId" type="xs:int" />
+          <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+          <xs:element minOccurs="0" name="ComponentFormatId" type="xs:int" />
+          <xs:element minOccurs="0" name="DistrictId" type="xs:int" />
+          <xs:element minOccurs="0" name="ExamComponentDateId" type="xs:long" />
+          <xs:element minOccurs="0" name="LocalComponentDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+          <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchEventDto" nillable="true" type="tns:SearchEventDto" />
+  <xs:complexType name="EventListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentDuration" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentFormatId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentFormatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamSeries" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamStartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalComponentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="LocalComponentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OptionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventListDto" nillable="true" type="tns:EventListDto" />
+  <xs:complexType name="ArrayOfEventListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventListDto" nillable="true" type="tns:EventListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventListDto" nillable="true" type="tns:ArrayOfEventListDto" />
+  <xs:complexType name="ExamComponentDistrictListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualCandidateCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstimatedCandidateCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimetableSession" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamComponentDistrictListDto" nillable="true" type="tns:ExamComponentDistrictListDto" />
+  <xs:complexType name="ArrayOfExamComponentDistrictListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamComponentDistrictListDto" nillable="true" type="tns:ExamComponentDistrictListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamComponentDistrictListDto" nillable="true" type="tns:ArrayOfExamComponentDistrictListDto" />
+  <xs:complexType name="ExamComponentDistrictDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualCandidateCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:int" />
+      <xs:element minOccurs="0" name="EstimatedCandidateCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamComponentDateId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamComponentDistrictDto" nillable="true" type="tns:ExamComponentDistrictDto" />
+  <xs:complexType name="EventVenueListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuildingCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamComponentDateDistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalNumberOfCandidates" type="xs:int" />
+      <xs:element minOccurs="0" name="VenueCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventVenueListDto" nillable="true" type="tns:EventVenueListDto" />
+  <xs:complexType name="ArrayOfEventVenueListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventVenueListDto" nillable="true" type="tns:EventVenueListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventVenueListDto" nillable="true" type="tns:ArrayOfEventVenueListDto" />
+  <xs:complexType name="SearchEventBaseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentFormatId" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamComponentDateId" type="xs:int" />
+      <xs:element minOccurs="0" name="GlobalComponentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+      <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchEventBaseDto" nillable="true" type="tns:SearchEventBaseDto" />
+  <xs:complexType name="RoomListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualNumberOfCandidates" type="xs:int" />
+      <xs:element minOccurs="0" name="BuildingId" type="xs:int" />
+      <xs:element minOccurs="0" name="BuildingName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfCandidates" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+      <xs:element minOccurs="0" name="VenueName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomListDto" nillable="true" type="tns:RoomListDto" />
+  <xs:complexType name="ArrayOfRoomListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomListDto" nillable="true" type="tns:RoomListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomListDto" nillable="true" type="tns:ArrayOfRoomListDto" />
+  <xs:complexType name="EventDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExamComponentDateDistrictId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="RoomBookings" nillable="true" type="tns:ArrayOfRoomBookingDto" />
+      <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventDto" nillable="true" type="tns:EventDto" />
+  <xs:complexType name="ArrayOfRoomBookingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomBookingDto" nillable="true" type="tns:RoomBookingDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomBookingDto" nillable="true" type="tns:ArrayOfRoomBookingDto" />
+  <xs:complexType name="RoomBookingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EndTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="EventId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="NumberOfCandidates" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomId" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" type="ser:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomBookingDto" nillable="true" type="tns:RoomBookingDto" />
+  <xs:complexType name="EventStaffAmountListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignedStaffCount" type="xs:int" />
+      <xs:element minOccurs="0" name="AvailableStaffCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequiredStaffCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventStaffAmountListDto" nillable="true" type="tns:EventStaffAmountListDto" />
+  <xs:complexType name="ArrayOfEventStaffAmountListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventStaffAmountListDto" nillable="true" type="tns:EventStaffAmountListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventStaffAmountListDto" nillable="true" type="tns:ArrayOfEventStaffAmountListDto" />
+  <xs:complexType name="ExamStaffPlanningDistrictListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignedVenueStaff" type="xs:int" />
+      <xs:element minOccurs="0" name="AvailableVenueStaff" type="xs:int" />
+      <xs:element minOccurs="0" name="DistrictName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="RequiredVenueStaff" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffPlanningDistrictListDto" nillable="true" type="tns:ExamStaffPlanningDistrictListDto" />
+  <xs:complexType name="ArrayOfExamStaffPlanningDistrictListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffPlanningDistrictListDto" nillable="true" type="tns:ExamStaffPlanningDistrictListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffPlanningDistrictListDto" nillable="true" type="tns:ArrayOfExamStaffPlanningDistrictListDto" />
+  <xs:complexType name="ArrayOfExamStaffAllocationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffAllocationDto" nillable="true" type="tns:ExamStaffAllocationDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffAllocationDto" nillable="true" type="tns:ArrayOfExamStaffAllocationDto" />
+  <xs:complexType name="ExamStaffAllocationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamStaffPlanningId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffAllocationDto" nillable="true" type="tns:ExamStaffAllocationDto" />
+</xs:schema>

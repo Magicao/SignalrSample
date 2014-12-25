@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Apploaction</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("~/Content/kendo")
+    <link href="~/Content/kendo/2014.1.318/kendo.common.min.css" rel="stylesheet">
+    <link href="~/Content/kendo/2014.1.318/kendo.bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="width: 980px; margin: 100px auto;">
+    <div id="userSettings">
+        @Html.Partial("_UserSettings")
+    </div>
+
+    <div id="body" >
+        @RenderBody()
+    </div>
+
+    <footer>
+        <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Grid", "KendoGridDemo", "Home")</li>
+                <li>@Html.ActionLink("TaskList", "Index", "Home", new { area = "" }, null)</li>
+                <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+            </ul>
+        </nav> 
+        <p>了解有关<a href="http://go.microsoft.com/fwlink/?LinkId=273732">Single Page Applacation</a>Details</p>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Applocation</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/ajaxlogin")
+    @Scripts.Render("~/bundles/SignlaR")
+    @Scripts.Render("~/bundles/kendo")
+        @RenderSection("scripts", required: false)
+   
+    @*<script src="~/Scripts/jquery.signalR-2.1.1.min.js"></script>
+    @*<script src="~/Scripts/kendo/2014.1.318/kendo.web.min.js"></script>*@
+    @*<script src="~/signalr/hubs"></script>*@
+    @*<script src="~/Scripts/hubDemo.js"></script>*@
+</body>
+</html>

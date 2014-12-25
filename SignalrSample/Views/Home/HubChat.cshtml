@@ -1,0 +1,21 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "HubChat.cshtml";
+}
+
+<h2>Hub Chat</h2>
+
+<div>
+    <input type="text" id="Placeholder" value="@ViewBag.ClientName" hidden="true" />
+    <input type="text" id="msg" />
+    <input type="button" id="broadcast" value="广播" />
+
+    <br />
+    <br />
+
+    <h3>
+        消息记录： (你是：<span id="MyClientName">@ViewBag.ClientName</span>):
+    </h3>
+
+    <ul id="messages"></ul>
+</div>

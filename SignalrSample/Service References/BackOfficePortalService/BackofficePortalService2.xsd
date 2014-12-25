@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" />
+  <xs:complexType name="BuildingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactTelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateOn" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="ExamStaffPlannings" nillable="true" type="q1:ArrayOfExamStaffPlanningforAllocationDto" />
+      <xs:element minOccurs="0" name="HasFacility" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rooms" nillable="true" type="tns:ArrayOfRoomDto" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuildingDto" nillable="true" type="tns:BuildingDto" />
+  <xs:complexType name="ArrayOfRoomDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomDto" nillable="true" type="tns:RoomDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomDto" nillable="true" type="tns:ArrayOfRoomDto" />
+  <xs:complexType name="RoomDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AudioEquipment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AudioEquipmentComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingId" type="xs:int" />
+      <xs:element minOccurs="0" name="Chairs" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ChairsComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dividers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DividersComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyEvacuationSigns" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyEvacuationSignsComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyLighting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyLightingComment" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="ExamStaffPlannings" nillable="true" type="q2:ArrayOfExamStaffPlanningforAllocationDto" />
+      <xs:element minOccurs="0" name="FireExtinguishers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FireExtinguishersComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlasswareEquipment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GlasswareEquipmentComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LabEquipment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LabEquipmentComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabTechnician" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LabTechnicianComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomCapacitys" nillable="true" type="tns:ArrayOfRoomCapacityDto" />
+      <xs:element minOccurs="0" name="TableLarge" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TableLargeComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableStandard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TableStandardComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Whiteboard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WhiteboardComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WiFiEquipment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WiFiEquipmentComment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomDto" nillable="true" type="tns:RoomDto" />
+  <xs:complexType name="ArrayOfRoomCapacityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomCapacityDto" nillable="true" type="tns:RoomCapacityDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomCapacityDto" nillable="true" type="tns:ArrayOfRoomCapacityDto" />
+  <xs:complexType name="RoomCapacityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacity" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentFormatId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomCapacityDto" nillable="true" type="tns:RoomCapacityDto" />
+  <xs:complexType name="BuildingFacilityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuildingId" type="xs:int" />
+      <xs:element minOccurs="0" name="CarParking" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CarParkingComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CloakRoom" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CloakRoomComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControlRoom" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ControlRoomComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyEvacuationSigns" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyEvacuationSignsComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyLighting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyLightingComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FireExtinguishers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FireExtinguishersComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstAidKit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirstAidKitComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ITSupport" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ITSupportComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lockers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockersComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nurse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NurseComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RAFW" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RAFWComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Security" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SecurityComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StorageCabinets" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StorageCabinetsComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaitingArea" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WaitingAreaComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WaterCoolers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WaterCoolersComment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuildingFacilityDto" nillable="true" type="tns:BuildingFacilityDto" />
+  <xs:complexType name="ArrayOfBuildingDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BuildingDto" nillable="true" type="tns:BuildingDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuildingDto" nillable="true" type="tns:ArrayOfBuildingDto" />
+  <xs:complexType name="ArrayOfBuildingFacilityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BuildingFacilityDto" nillable="true" type="tns:BuildingFacilityDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuildingFacilityDto" nillable="true" type="tns:ArrayOfBuildingFacilityDto" />
+  <xs:complexType name="SearchVenueDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" base="q3:SearchBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:int" />
+          <xs:element minOccurs="0" name="BuildingId" type="xs:int" />
+          <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+          <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+          <xs:element minOccurs="0" name="VenueName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchVenueDto" nillable="true" type="tns:SearchVenueDto" />
+  <xs:complexType name="BuildingListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuildingId" type="xs:int" />
+      <xs:element minOccurs="0" name="BuildingName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasFacility" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomCount" type="xs:int" />
+      <xs:element minOccurs="0" name="VenueName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuildingListEntryDto" nillable="true" type="tns:BuildingListEntryDto" />
+  <xs:complexType name="ArrayOfBuildingListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BuildingListEntryDto" nillable="true" type="tns:BuildingListEntryDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuildingListEntryDto" nillable="true" type="tns:ArrayOfBuildingListEntryDto" />
+  <xs:complexType name="RoomListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RoomCapacitys" nillable="true" type="tns:ArrayOfRoomCapacityDto" />
+      <xs:element minOccurs="0" name="RoomId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomListEntryDto" nillable="true" type="tns:RoomListEntryDto" />
+  <xs:complexType name="ArrayOfRoomListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomListEntryDto" nillable="true" type="tns:RoomListEntryDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomListEntryDto" nillable="true" type="tns:ArrayOfRoomListEntryDto" />
+  <xs:complexType name="VenueDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Buildings" nillable="true" type="tns:ArrayOfBuildingDto" />
+      <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTelNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DistrictId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VenueDto" nillable="true" type="tns:VenueDto" />
+  <xs:complexType name="ArrayOfVenueDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VenueDto" nillable="true" type="tns:VenueDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVenueDto" nillable="true" type="tns:ArrayOfVenueDto" />
+  <xs:complexType name="VenueListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CentreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VenueId" type="xs:int" />
+      <xs:element minOccurs="0" name="VenueName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VenueListEntryDto" nillable="true" type="tns:VenueListEntryDto" />
+  <xs:complexType name="ArrayOfVenueListEntryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VenueListEntryDto" nillable="true" type="tns:VenueListEntryDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVenueListEntryDto" nillable="true" type="tns:ArrayOfVenueListEntryDto" />
+</xs:schema>

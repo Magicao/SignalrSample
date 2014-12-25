@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BackOfficeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Kendo.DynamicLinq" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Organisation" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Sample" />
+      <xsd:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBackOfficeService_CreateBuilding_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBuilding" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateBuilding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBuildingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateBuildingFacility_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBuildingFacility" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateBuildingFacility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBuildingFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuilding_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuilding" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuilding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingFacility_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingFacility" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingFacility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyBuildingNameIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBuildingNameIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyBuildingNameIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBuildingNameIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyBuilding_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBuilding" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyBuilding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBuildingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyBuildingFacility_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBuildingFacility" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyBuildingFacility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyBuildingFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoom" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoom" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyRoomNameIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyRoomNameIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyRoomNameIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyRoomNameIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRoomList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRoomList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoomListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoom" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingDictionaryByVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingDictionaryByVenue" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetBuildingDictionaryByVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuildingDictionaryByVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCityDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCityDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetDistrictDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetDistrictDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRegionTree_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionTree" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetRegionTree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueDictionaryByDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueDictionaryByDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueDictionaryByDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueDictionaryByDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamComponentDatesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamComponentDatesList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamComponentDatesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamComponentDatesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamComponentDistrictList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamComponentDistrictList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamComponentDistrictList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamComponentDistrictListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamComponentDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamComponentDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamComponentDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamComponentDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventVenueList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventVenueList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventVenueList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventVenueListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventRoomList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventRoomList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventRoomList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventRoomListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyEventVenueBooking_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyEventVenueBooking" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyEventVenueBooking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyEventVenueBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSelectedVenues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedVenues" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSelectedVenues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedVenuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventStaffAmountList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventStaffAmountList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetEventStaffAmountList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventStaffAmountListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamPlanningDistrictList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlanningDistrictList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamPlanningDistrictList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlanningDistrictListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffPlanningList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffPlanningList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffPlanningList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffPlanningListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffPlanningListforAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffPlanningListforAllocation" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffPlanningListforAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffPlanningListforAllocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetAvailableExamStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableExamStaff" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetAvailableExamStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableExamStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffAllocationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffAllocationList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffAllocationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffAllocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ExamStaffAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExamStaffAllocation" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ExamStaffAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExamStaffAllocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaff" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaff" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffIdentificationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffIdentificationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffIdentificationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffIdentificationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffContacts" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CheckPassportOrIDNumberIsValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPassportOrIDNumberIsValid" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CheckPassportOrIDNumberIsValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPassportOrIDNumberIsValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateTrainingAndCertification_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTrainingAndCertification" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateTrainingAndCertification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTrainingAndCertificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateCertificationAndDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCertificationAndDocument" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateCertificationAndDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCertificationAndDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateSecurityClearance_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSecurityClearance" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateSecurityClearance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSecurityClearanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffFinance_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffFinance" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffFinance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffFinanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffFinanceModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffFinanceModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffFinanceModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffFinanceModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffFinance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffFinance" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffFinance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffFinanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffContactsModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffContactsModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffContactsModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffContactsModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffContacts" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffEmergencyContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffEmergencyContacts" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffEmergencyContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffEmergencyContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffEmergencyContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffEmergencyContacts" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamStaffEmergencyContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamStaffEmergencyContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetTrainingAndCertificationModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingAndCertificationModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetTrainingAndCertificationModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingAndCertificationModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyTrainingAndCertification_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyTrainingAndCertification" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyTrainingAndCertification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyTrainingAndCertificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCertificationAndDocumentModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificationAndDocumentModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCertificationAndDocumentModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCertificationAndDocumentModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyCertificationAndDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCertificationAndDocument" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyCertificationAndDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCertificationAndDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSecurityClearanceModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityClearanceModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSecurityClearanceModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityClearanceModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifySecurityClearance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifySecurityClearance" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifySecurityClearance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifySecurityClearanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffIdentificationModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffIdentificationModel" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffIdentificationModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffIdentificationModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffIdentificationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffIdentificationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffIdentificationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffIdentificationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffRoleProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffRoleProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamStaffRoleProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamStaffRoleProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffRoleProductList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffRoleProductList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamStaffRoleProductList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStaffRoleProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCountryDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCountryDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CheckEmailAddressIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEmailAddressIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CheckEmailAddressIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEmailAddressIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSampleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleData" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetSampleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamRoleProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamRoleProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateExamRoleProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExamRoleProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateCountryExamRoleProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCountryExamRoleProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateCountryExamRoleProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCountryExamRoleProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetProductDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetProductDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleFormatDictonary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleFormatDictonary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleFormatDictonary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleFormatDictonaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetComponentFormatDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComponentFormatDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetComponentFormatDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComponentFormatDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyExamRoleProfileIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyExamRoleProfileIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyExamRoleProfileIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyExamRoleProfileIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyCountryExamRoleIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCountryExamRoleIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyCountryExamRoleIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCountryExamRoleIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCountryExamRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryExamRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCountryExamRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryExamRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamRoleProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamRoleProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyExamRoleProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyExamRoleProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyCountryExamRoleProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCountryExamRoleProfile" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyCountryExamRoleProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCountryExamRoleProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetExamRoleProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoleProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCurrencyDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetCurrencyDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVenue" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_CreateVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueList" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenueList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyVenue" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_ModifyVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyVenueNameIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyVenueNameIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_VerifyVenueNameIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyVenueNameIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenue" />
+  </wsdl:message>
+  <wsdl:message name="IBackOfficeService_GetVenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBackOfficeService">
+    <wsdl:operation name="CreateBuilding">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateBuilding" message="tns:IBackOfficeService_CreateBuilding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateBuildingResponse" message="tns:IBackOfficeService_CreateBuilding_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBuildingFacility">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateBuildingFacility" message="tns:IBackOfficeService_CreateBuildingFacility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateBuildingFacilityResponse" message="tns:IBackOfficeService_CreateBuildingFacility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuilding">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuilding" message="tns:IBackOfficeService_GetBuilding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingResponse" message="tns:IBackOfficeService_GetBuilding_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingFacility">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingFacility" message="tns:IBackOfficeService_GetBuildingFacility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingFacilityResponse" message="tns:IBackOfficeService_GetBuildingFacility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBuildingNameIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyBuildingNameIsExist" message="tns:IBackOfficeService_VerifyBuildingNameIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyBuildingNameIsExistResponse" message="tns:IBackOfficeService_VerifyBuildingNameIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingList" message="tns:IBackOfficeService_GetBuildingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingListResponse" message="tns:IBackOfficeService_GetBuildingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBuilding">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyBuilding" message="tns:IBackOfficeService_ModifyBuilding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyBuildingResponse" message="tns:IBackOfficeService_ModifyBuilding_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBuildingFacility">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyBuildingFacility" message="tns:IBackOfficeService_ModifyBuildingFacility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyBuildingFacilityResponse" message="tns:IBackOfficeService_ModifyBuildingFacility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueDictionary" message="tns:IBackOfficeService_GetVenueDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueDictionaryResponse" message="tns:IBackOfficeService_GetVenueDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateRoom" message="tns:IBackOfficeService_CreateRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateRoomResponse" message="tns:IBackOfficeService_CreateRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetRoom" message="tns:IBackOfficeService_GetRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetRoomResponse" message="tns:IBackOfficeService_GetRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyRoomNameIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyRoomNameIsExist" message="tns:IBackOfficeService_VerifyRoomNameIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyRoomNameIsExistResponse" message="tns:IBackOfficeService_VerifyRoomNameIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetRoomList" message="tns:IBackOfficeService_GetRoomList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetRoomListResponse" message="tns:IBackOfficeService_GetRoomList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyRoom" message="tns:IBackOfficeService_ModifyRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyRoomResponse" message="tns:IBackOfficeService_ModifyRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingDictionaryByVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingDictionaryByVenue" message="tns:IBackOfficeService_GetBuildingDictionaryByVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetBuildingDictionaryByVenueResponse" message="tns:IBackOfficeService_GetBuildingDictionaryByVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetCityDictionary" message="tns:IBackOfficeService_GetCityDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetCityDictionaryResponse" message="tns:IBackOfficeService_GetCityDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetDistrictDictionary" message="tns:IBackOfficeService_GetDistrictDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetDistrictDictionaryResponse" message="tns:IBackOfficeService_GetDistrictDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionTree">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetRegionTree" message="tns:IBackOfficeService_GetRegionTree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetRegionTreeResponse" message="tns:IBackOfficeService_GetRegionTree_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueDictionaryByDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueDictionaryByDistrict" message="tns:IBackOfficeService_GetVenueDictionaryByDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueDictionaryByDistrictResponse" message="tns:IBackOfficeService_GetVenueDictionaryByDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamComponentDatesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamComponentDatesList" message="tns:IBackOfficeService_GetExamComponentDatesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamComponentDatesListResponse" message="tns:IBackOfficeService_GetExamComponentDatesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamComponentDistrictList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamComponentDistrictList" message="tns:IBackOfficeService_GetExamComponentDistrictList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamComponentDistrictListResponse" message="tns:IBackOfficeService_GetExamComponentDistrictList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamComponentDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamComponentDistrict" message="tns:IBackOfficeService_ModifyExamComponentDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamComponentDistrictResponse" message="tns:IBackOfficeService_ModifyExamComponentDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventVenueList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventVenueList" message="tns:IBackOfficeService_GetEventVenueList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventVenueListResponse" message="tns:IBackOfficeService_GetEventVenueList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventRoomList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventRoomList" message="tns:IBackOfficeService_GetEventRoomList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventRoomListResponse" message="tns:IBackOfficeService_GetEventRoomList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyEventVenueBooking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyEventVenueBooking" message="tns:IBackOfficeService_ModifyEventVenueBooking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyEventVenueBookingResponse" message="tns:IBackOfficeService_ModifyEventVenueBooking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedVenues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetSelectedVenues" message="tns:IBackOfficeService_GetSelectedVenues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetSelectedVenuesResponse" message="tns:IBackOfficeService_GetSelectedVenues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventStaffAmountList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventStaffAmountList" message="tns:IBackOfficeService_GetEventStaffAmountList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetEventStaffAmountListResponse" message="tns:IBackOfficeService_GetEventStaffAmountList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlanningDistrictList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamPlanningDistrictList" message="tns:IBackOfficeService_GetExamPlanningDistrictList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamPlanningDistrictListResponse" message="tns:IBackOfficeService_GetExamPlanningDistrictList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffPlanningList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningList" message="tns:IBackOfficeService_GetExamStaffPlanningList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningListResponse" message="tns:IBackOfficeService_GetExamStaffPlanningList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffPlanningListforAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningListforAllocation" message="tns:IBackOfficeService_GetExamStaffPlanningListforAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningListforAllocationResponse" message="tns:IBackOfficeService_GetExamStaffPlanningListforAllocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableExamStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetAvailableExamStaff" message="tns:IBackOfficeService_GetAvailableExamStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetAvailableExamStaffResponse" message="tns:IBackOfficeService_GetAvailableExamStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffAllocationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffAllocationList" message="tns:IBackOfficeService_GetExamStaffAllocationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffAllocationListResponse" message="tns:IBackOfficeService_GetExamStaffAllocationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExamStaffAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ExamStaffAllocation" message="tns:IBackOfficeService_ExamStaffAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ExamStaffAllocationResponse" message="tns:IBackOfficeService_ExamStaffAllocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaff" message="tns:IBackOfficeService_CreateExamStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffResponse" message="tns:IBackOfficeService_CreateExamStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffModel" message="tns:IBackOfficeService_GetExamStaffModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffModelResponse" message="tns:IBackOfficeService_GetExamStaffModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaff" message="tns:IBackOfficeService_ModifyExamStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffResponse" message="tns:IBackOfficeService_ModifyExamStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffList" message="tns:IBackOfficeService_GetExamStaffList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffListResponse" message="tns:IBackOfficeService_GetExamStaffList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffIdentificationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffIdentificationDetails" message="tns:IBackOfficeService_CreateExamStaffIdentificationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffIdentificationDetailsResponse" message="tns:IBackOfficeService_CreateExamStaffIdentificationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffContacts" message="tns:IBackOfficeService_CreateExamStaffContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffContactsResponse" message="tns:IBackOfficeService_CreateExamStaffContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassportOrIDNumberIsValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CheckPassportOrIDNumberIsValid" message="tns:IBackOfficeService_CheckPassportOrIDNumberIsValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CheckPassportOrIDNumberIsValidResponse" message="tns:IBackOfficeService_CheckPassportOrIDNumberIsValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTrainingAndCertification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateTrainingAndCertification" message="tns:IBackOfficeService_CreateTrainingAndCertification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateTrainingAndCertificationResponse" message="tns:IBackOfficeService_CreateTrainingAndCertification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCertificationAndDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateCertificationAndDocument" message="tns:IBackOfficeService_CreateCertificationAndDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateCertificationAndDocumentResponse" message="tns:IBackOfficeService_CreateCertificationAndDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSecurityClearance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateSecurityClearance" message="tns:IBackOfficeService_CreateSecurityClearance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateSecurityClearanceResponse" message="tns:IBackOfficeService_CreateSecurityClearance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffFinance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffFinance" message="tns:IBackOfficeService_CreateExamStaffFinance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffFinanceResponse" message="tns:IBackOfficeService_CreateExamStaffFinance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffFinanceModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffFinanceModel" message="tns:IBackOfficeService_GetExamStaffFinanceModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffFinanceModelResponse" message="tns:IBackOfficeService_GetExamStaffFinanceModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffFinance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffFinance" message="tns:IBackOfficeService_ModifyExamStaffFinance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffFinanceResponse" message="tns:IBackOfficeService_ModifyExamStaffFinance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffContactsModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffContactsModel" message="tns:IBackOfficeService_GetExamStaffContactsModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffContactsModelResponse" message="tns:IBackOfficeService_GetExamStaffContactsModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffContacts" message="tns:IBackOfficeService_ModifyExamStaffContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffContactsResponse" message="tns:IBackOfficeService_ModifyExamStaffContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffEmergencyContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffEmergencyContacts" message="tns:IBackOfficeService_ModifyExamStaffEmergencyContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffEmergencyContactsResponse" message="tns:IBackOfficeService_ModifyExamStaffEmergencyContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffEmergencyContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffEmergencyContacts" message="tns:IBackOfficeService_CreateExamStaffEmergencyContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamStaffEmergencyContactsResponse" message="tns:IBackOfficeService_CreateExamStaffEmergencyContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingAndCertificationModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetTrainingAndCertificationModel" message="tns:IBackOfficeService_GetTrainingAndCertificationModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetTrainingAndCertificationModelResponse" message="tns:IBackOfficeService_GetTrainingAndCertificationModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTrainingAndCertification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyTrainingAndCertification" message="tns:IBackOfficeService_ModifyTrainingAndCertification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyTrainingAndCertificationResponse" message="tns:IBackOfficeService_ModifyTrainingAndCertification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificationAndDocumentModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetCertificationAndDocumentModel" message="tns:IBackOfficeService_GetCertificationAndDocumentModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetCertificationAndDocumentModelResponse" message="tns:IBackOfficeService_GetCertificationAndDocumentModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCertificationAndDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyCertificationAndDocument" message="tns:IBackOfficeService_ModifyCertificationAndDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyCertificationAndDocumentResponse" message="tns:IBackOfficeService_ModifyCertificationAndDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityClearanceModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetSecurityClearanceModel" message="tns:IBackOfficeService_GetSecurityClearanceModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetSecurityClearanceModelResponse" message="tns:IBackOfficeService_GetSecurityClearanceModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifySecurityClearance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifySecurityClearance" message="tns:IBackOfficeService_ModifySecurityClearance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifySecurityClearanceResponse" message="tns:IBackOfficeService_ModifySecurityClearance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffIdentificationModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffIdentificationModel" message="tns:IBackOfficeService_GetExamStaffIdentificationModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffIdentificationModelResponse" message="tns:IBackOfficeService_GetExamStaffIdentificationModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffIdentificationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffIdentificationDetails" message="tns:IBackOfficeService_ModifyExamStaffIdentificationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffIdentificationDetailsResponse" message="tns:IBackOfficeService_ModifyExamStaffIdentificationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffRoleProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffRoleProduct" message="tns:IBackOfficeService_ModifyExamStaffRoleProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamStaffRoleProductResponse" message="tns:IBackOfficeService_ModifyExamStaffRoleProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffRoleProductList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffRoleProductList" message="tns:IBackOfficeService_GetExamStaffRoleProductList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamStaffRoleProductListResponse" message="tns:IBackOfficeService_GetExamStaffRoleProductList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetCountryDictionary" message="tns:IBackOfficeService_GetCountryDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetCountryDictionaryResponse" message="tns:IBackOfficeService_GetCountryDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmailAddressIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CheckEmailAddressIsExist" message="tns:IBackOfficeService_CheckEmailAddressIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CheckEmailAddressIsExistResponse" message="tns:IBackOfficeService_CheckEmailAddressIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetSampleData" message="tns:IBackOfficeService_GetSampleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetSampleDataResponse" message="tns:IBackOfficeService_GetSampleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamRoleProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamRoleProfile" message="tns:IBackOfficeService_CreateExamRoleProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateExamRoleProfileResponse" message="tns:IBackOfficeService_CreateExamRoleProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCountryExamRoleProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateCountryExamRoleProfile" message="tns:IBackOfficeService_CreateCountryExamRoleProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateCountryExamRoleProfileResponse" message="tns:IBackOfficeService_CreateCountryExamRoleProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetProductDictionary" message="tns:IBackOfficeService_GetProductDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetProductDictionaryResponse" message="tns:IBackOfficeService_GetProductDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleDictionary" message="tns:IBackOfficeService_GetExamRoleDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleDictionaryResponse" message="tns:IBackOfficeService_GetExamRoleDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleFormatDictonary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleFormatDictonary" message="tns:IBackOfficeService_GetExamRoleFormatDictonary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleFormatDictonaryResponse" message="tns:IBackOfficeService_GetExamRoleFormatDictonary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileDictionary" message="tns:IBackOfficeService_GetExamRoleProfileDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileDictionaryResponse" message="tns:IBackOfficeService_GetExamRoleProfileDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComponentFormatDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetComponentFormatDictionary" message="tns:IBackOfficeService_GetComponentFormatDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetComponentFormatDictionaryResponse" message="tns:IBackOfficeService_GetComponentFormatDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyExamRoleProfileIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyExamRoleProfileIsExist" message="tns:IBackOfficeService_VerifyExamRoleProfileIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyExamRoleProfileIsExistResponse" message="tns:IBackOfficeService_VerifyExamRoleProfileIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCountryExamRoleIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyCountryExamRoleIsExist" message="tns:IBackOfficeService_VerifyCountryExamRoleIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyCountryExamRoleIsExistResponse" message="tns:IBackOfficeService_VerifyCountryExamRoleIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileList" message="tns:IBackOfficeService_GetExamRoleProfileList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileListResponse" message="tns:IBackOfficeService_GetExamRoleProfileList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryExamRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetCountryExamRoleList" message="tns:IBackOfficeService_GetCountryExamRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetCountryExamRoleListResponse" message="tns:IBackOfficeService_GetCountryExamRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamRoleProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamRoleProfile" message="tns:IBackOfficeService_ModifyExamRoleProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyExamRoleProfileResponse" message="tns:IBackOfficeService_ModifyExamRoleProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCountryExamRoleProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyCountryExamRoleProfile" message="tns:IBackOfficeService_ModifyCountryExamRoleProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyCountryExamRoleProfileResponse" message="tns:IBackOfficeService_ModifyCountryExamRoleProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileById" message="tns:IBackOfficeService_GetExamRoleProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetExamRoleProfileByIdResponse" message="tns:IBackOfficeService_GetExamRoleProfileById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetCurrencyDictionary" message="tns:IBackOfficeService_GetCurrencyDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetCurrencyDictionaryResponse" message="tns:IBackOfficeService_GetCurrencyDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/CreateVenue" message="tns:IBackOfficeService_CreateVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/CreateVenueResponse" message="tns:IBackOfficeService_CreateVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueList" message="tns:IBackOfficeService_GetVenueList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueListResponse" message="tns:IBackOfficeService_GetVenueList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyVenue" message="tns:IBackOfficeService_ModifyVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/ModifyVenueResponse" message="tns:IBackOfficeService_ModifyVenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyVenueNameIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyVenueNameIsExist" message="tns:IBackOfficeService_VerifyVenueNameIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/VerifyVenueNameIsExistResponse" message="tns:IBackOfficeService_VerifyVenueNameIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenue" message="tns:IBackOfficeService_GetVenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackOfficeService/GetVenueResponse" message="tns:IBackOfficeService_GetVenue_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBackOfficeService" type="tns:IBackOfficeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateBuilding">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateBuilding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBuildingFacility">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateBuildingFacility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuilding">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetBuilding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingFacility">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetBuildingFacility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBuildingNameIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/VerifyBuildingNameIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetBuildingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBuilding">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyBuilding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyBuildingFacility">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyBuildingFacility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetVenueDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoom">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoom">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyRoomNameIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/VerifyRoomNameIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoomList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetRoomList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRoom">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuildingDictionaryByVenue">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetBuildingDictionaryByVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetCityDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetDistrictDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionTree">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetRegionTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueDictionaryByDistrict">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetVenueDictionaryByDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamComponentDatesList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamComponentDatesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamComponentDistrictList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamComponentDistrictList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamComponentDistrict">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamComponentDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventVenueList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetEventVenueList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventRoomList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetEventRoomList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyEventVenueBooking">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyEventVenueBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedVenues">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetSelectedVenues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventStaffAmountList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetEventStaffAmountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlanningDistrictList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamPlanningDistrictList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffPlanningList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffPlanningListforAllocation">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffPlanningListforAllocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableExamStaff">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetAvailableExamStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffAllocationList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffAllocationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamStaffAllocation">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ExamStaffAllocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaff">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaff">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffIdentificationDetails">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamStaffIdentificationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffContacts">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamStaffContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPassportOrIDNumberIsValid">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CheckPassportOrIDNumberIsValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTrainingAndCertification">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateTrainingAndCertification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCertificationAndDocument">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateCertificationAndDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSecurityClearance">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateSecurityClearance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffFinance">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamStaffFinance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffFinanceModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffFinanceModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffFinance">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaffFinance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffContactsModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffContactsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffContacts">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaffContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffEmergencyContacts">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaffEmergencyContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamStaffEmergencyContacts">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamStaffEmergencyContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingAndCertificationModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetTrainingAndCertificationModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTrainingAndCertification">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyTrainingAndCertification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificationAndDocumentModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetCertificationAndDocumentModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCertificationAndDocument">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyCertificationAndDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityClearanceModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetSecurityClearanceModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifySecurityClearance">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifySecurityClearance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffIdentificationModel">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffIdentificationModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffIdentificationDetails">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaffIdentificationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamStaffRoleProduct">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamStaffRoleProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStaffRoleProductList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamStaffRoleProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetCountryDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmailAddressIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CheckEmailAddressIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleData">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetSampleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExamRoleProfile">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateExamRoleProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCountryExamRoleProfile">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateCountryExamRoleProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetProductDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamRoleDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleFormatDictonary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamRoleFormatDictonary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamRoleProfileDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComponentFormatDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetComponentFormatDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyExamRoleProfileIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/VerifyExamRoleProfileIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCountryExamRoleIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/VerifyCountryExamRoleIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamRoleProfileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryExamRoleList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetCountryExamRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyExamRoleProfile">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyExamRoleProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCountryExamRoleProfile">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyCountryExamRoleProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoleProfileById">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetExamRoleProfileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyDictionary">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetCurrencyDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVenue">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/CreateVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueList">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetVenueList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyVenue">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/ModifyVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyVenueNameIsExist">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/VerifyVenueNameIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <soap:operation soapAction="http://tempuri.org/IBackOfficeService/GetVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BackOfficeService">
+    <wsdl:port name="BasicHttpBinding_IBackOfficeService" binding="tns:BasicHttpBinding_IBackOfficeService">
+      <soap:address location="http://localhost:52220/BackofficePortalService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

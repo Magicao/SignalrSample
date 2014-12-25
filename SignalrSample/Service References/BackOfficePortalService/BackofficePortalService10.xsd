@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Organisation" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" />
+  <xs:element name="CreateBuilding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="buildingDto" nillable="true" type="q1:BuildingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateBuildingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateBuildingResult" nillable="true" type="q2:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateBuildingFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="buildingFacilityDto" nillable="true" type="q3:BuildingFacilityDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateBuildingFacilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateBuildingFacilityResult" nillable="true" type="q4:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuilding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="buildingId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetBuildingResult" nillable="true" type="q5:ResultBaseOfBuildingDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="buildingId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingFacilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetBuildingFacilityResult" nillable="true" type="q6:ResultBaseOfBuildingFacilityDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyBuildingNameIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="buildingDto" nillable="true" type="q7:BuildingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyBuildingNameIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyBuildingNameIsExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="searchVenueDto" nillable="true" type="q8:SearchVenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetBuildingListResult" nillable="true" type="q9:ResultBaseOfBuildingListEntryDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyBuilding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="buildingDto" nillable="true" type="q10:BuildingDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyBuildingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyBuildingResult" nillable="true" type="q11:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyBuildingFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="buildingFacilityDto" nillable="true" type="q12:BuildingFacilityDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyBuildingFacilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyBuildingFacilityResult" nillable="true" type="q13:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centreId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetVenueDictionaryResult" nillable="true" type="q14:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRoom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="roomDto" nillable="true" type="q15:RoomDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRoomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateRoomResult" nillable="true" type="q16:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roomId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetRoomResult" nillable="true" type="q17:ResultBaseOfRoomDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyRoomNameIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="roomDto" nillable="true" type="q18:RoomDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyRoomNameIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyRoomNameIsExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="searchVenueDto" nillable="true" type="q19:SearchVenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetRoomListResult" nillable="true" type="q20:ResultBaseOfRoomListEntryDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyRoom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="roomDto" nillable="true" type="q21:RoomDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyRoomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyRoomResult" nillable="true" type="q22:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingDictionaryByVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="venueId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildingDictionaryByVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetBuildingDictionaryByVenueResult" nillable="true" type="q23:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="countryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCityDictionaryResult" nillable="true" type="q24:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetDistrictDictionaryResult" nillable="true" type="q25:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" minOccurs="0" name="commonSearch" nillable="true" type="q26:CommonSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionTreeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Organisation" minOccurs="0" name="GetRegionTreeResult" nillable="true" type="q27:ArrayOfOrganisationCentreListDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueDictionaryByDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="districtId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueDictionaryByDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetVenueDictionaryByDistrictResult" nillable="true" type="q28:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamComponentDatesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventDto" nillable="true" type="q29:SearchEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamComponentDatesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamComponentDatesListResult" nillable="true" type="q30:ResultBaseOfEventListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamComponentDistrictList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventDto" nillable="true" type="q31:SearchEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamComponentDistrictListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamComponentDistrictListResult" nillable="true" type="q32:ResultBaseOfExamComponentDistrictListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamComponentDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="examComponentDistrictDto" nillable="true" type="q33:ExamComponentDistrictDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamComponentDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamComponentDistrictResult" nillable="true" type="q34:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventVenueList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventDto" nillable="true" type="q35:SearchEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventVenueListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetEventVenueListResult" nillable="true" type="q36:ResultBaseOfEventVenueListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventRoomList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventBaseDto" nillable="true" type="q37:SearchEventBaseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventRoomListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetEventRoomListResult" nillable="true" type="q38:ResultBaseOfRoomListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyEventVenueBooking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="eventDto" nillable="true" type="q39:EventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyEventVenueBookingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyEventVenueBookingResult" nillable="true" type="q40:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectedVenues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventBaseDto" nillable="true" type="q41:SearchEventBaseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectedVenuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSelectedVenuesResult" nillable="true" type="q42:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventStaffAmountList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventBaseDto" nillable="true" type="q43:SearchEventBaseDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventStaffAmountListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetEventStaffAmountListResult" nillable="true" type="q44:ResultBaseOfEventStaffAmountListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamPlanningDistrictList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="searchEventDto" nillable="true" type="q45:SearchEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamPlanningDistrictListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamPlanningDistrictListResult" nillable="true" type="q46:ResultBaseOfExamStaffPlanningDistrictListDtoKl1Oxoi8" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffPlanningList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="serSearchEventDto" nillable="true" type="q47:SearchEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffPlanningListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffPlanningListResult" nillable="true" type="q48:ResultBaseOfVenueDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffPlanningListforAllocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="model" nillable="true" type="q49:ExamStaffAllocationSearchDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffPlanningListforAllocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffPlanningListforAllocationResult" nillable="true" type="q50:ResultBaseOfExamStaffPlanningforAllocationDtoax311JHS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableExamStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="model" nillable="true" type="q51:ExamStaffAllocationSearchDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableExamStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetAvailableExamStaffResult" nillable="true" type="q52:ResultBaseOfAvailableExamStaffListDtoax311JHS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffAllocationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffAllocation" minOccurs="0" name="model" nillable="true" type="q53:ExamStaffAllocationSearchDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffAllocationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffAllocationListResult" nillable="true" type="q54:ResultBaseOfAllocatedExamStaffListDtoax311JHS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExamStaffAllocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Timetable" minOccurs="0" name="roomStaffAllocationlist" nillable="true" type="q55:ArrayOfExamStaffAllocationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExamStaffAllocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ExamStaffAllocationResult" nillable="true" type="q56:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q57:ExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamStaffResult" nillable="true" type="q58:ResultBaseOfExamStaffDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q59:ExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffModelResult" nillable="true" type="q60:ResultBaseOfExamStaffDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q61:ExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffResult" nillable="true" type="q62:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q63:SearchExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffListResult" nillable="true" type="q64:ResultBaseOfExamStaffListDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffIdentificationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q65:ExamStaffIdentificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffIdentificationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamStaffIdentificationDetailsResult" nillable="true" type="q66:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q67:ExamStaffContactDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamStaffContactsResult" nillable="true" type="q68:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPassportOrIDNumberIsValid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q69:ExamStaffIdentificationDto" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="staffModel" nillable="true" type="q70:ExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPassportOrIDNumberIsValidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CheckPassportOrIDNumberIsValidResult" nillable="true" type="q71:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTrainingAndCertification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q72:ExamStaffTrainingAndCertificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTrainingAndCertificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateTrainingAndCertificationResult" nillable="true" type="q73:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCertificationAndDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q74:ExamStaffCertificationAndDocumentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCertificationAndDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateCertificationAndDocumentResult" nillable="true" type="q75:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSecurityClearance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q76:ExamStaffSecurityClearanceDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSecurityClearanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateSecurityClearanceResult" nillable="true" type="q77:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffFinance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q78:ExamStaffFinanceDetailDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffFinanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamStaffFinanceResult" nillable="true" type="q79:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffFinanceModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q80:ExamStaffFinanceDetailDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffFinanceModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffFinanceModelResult" nillable="true" type="q81:ResultBaseOfExamStaffFinanceDetailDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffFinance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q82:ExamStaffFinanceDetailDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffFinanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffFinanceResult" nillable="true" type="q83:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffContactsModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q84:ExamStaffContactDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffContactsModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffContactsModelResult" nillable="true" type="q85:ResultBaseOfExamStaffContactDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q86:ExamStaffContactDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffContactsResult" nillable="true" type="q87:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffEmergencyContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q88:ExamStaffContactDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffEmergencyContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffEmergencyContactsResult" nillable="true" type="q89:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffEmergencyContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q90:ExamStaffContactDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamStaffEmergencyContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamStaffEmergencyContactsResult" nillable="true" type="q91:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingAndCertificationModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q92:ExamStaffTrainingAndCertificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingAndCertificationModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetTrainingAndCertificationModelResult" nillable="true" type="q93:ResultBaseOfExamStaffTrainingAndCertificationDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyTrainingAndCertification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q94:ExamStaffTrainingAndCertificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyTrainingAndCertificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyTrainingAndCertificationResult" nillable="true" type="q95:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCertificationAndDocumentModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q96:ExamStaffCertificationAndDocumentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCertificationAndDocumentModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetCertificationAndDocumentModelResult" nillable="true" type="q97:ResultBaseOfExamStaffCertificationAndDocumentDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyCertificationAndDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q98:ExamStaffCertificationAndDocumentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyCertificationAndDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyCertificationAndDocumentResult" nillable="true" type="q99:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityClearanceModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q100:ExamStaffSecurityClearanceDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityClearanceModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetSecurityClearanceModelResult" nillable="true" type="q101:ResultBaseOfExamStaffSecurityClearanceDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifySecurityClearance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q102:ExamStaffSecurityClearanceDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifySecurityClearanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifySecurityClearanceResult" nillable="true" type="q103:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffIdentificationModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q104:ExamStaffIdentificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffIdentificationModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamStaffIdentificationModelResult" nillable="true" type="q105:ResultBaseOfExamStaffIdentificationDtoVroUBnlc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffIdentificationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q106:ExamStaffIdentificationDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffIdentificationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffIdentificationDetailsResult" nillable="true" type="q107:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffRoleProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="examStaffRoleProfileDto" nillable="true" type="q108:ExamStaffDto" />
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="examStaffRoleProductList" nillable="true" type="q109:ArrayOfExamStaffRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamStaffRoleProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamStaffRoleProductResult" nillable="true" type="q110:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffRoleProductList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="venueStaffId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamStaffRoleProductListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="GetExamStaffRoleProductListResult" nillable="true" type="q111:ArrayOfExamStaffRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCountryDictionaryResult" nillable="true" type="q112:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEmailAddressIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" minOccurs="0" name="model" nillable="true" type="q113:ExamStaffDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEmailAddressIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CheckEmailAddressIsExistResult" nillable="true" type="q114:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSampleData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSampleDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetSampleDataResult" nillable="true" type="q115:ResultBaseOfSampleDataDtoEPUl_Sq7M" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamRoleProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="examRoleProfileDto" nillable="true" type="q116:ExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExamRoleProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateExamRoleProfileResult" nillable="true" type="q117:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCountryExamRoleProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="countryExamRoleDto" nillable="true" type="q118:CountryExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCountryExamRoleProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateCountryExamRoleProfileResult" nillable="true" type="q119:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductDictionary">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetProductDictionaryResult" nillable="true" type="q120:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleDictionary">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetExamRoleDictionaryResult" nillable="true" type="q121:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleFormatDictonary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleFormatDictonaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetExamRoleFormatDictonaryResult" nillable="true" type="q122:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+        <xs:element minOccurs="0" name="componentFormatId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetExamRoleProfileDictionaryResult" nillable="true" type="q123:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComponentFormatDictionary">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComponentFormatDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetComponentFormatDictionaryResult" nillable="true" type="q124:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyExamRoleProfileIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="examRoleProfileDto" nillable="true" type="q125:ExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyExamRoleProfileIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyExamRoleProfileIsExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyCountryExamRoleIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="countryExamRoleDto" nillable="true" type="q126:CountryExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyCountryExamRoleIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyCountryExamRoleIsExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="searchExamRoleDto" nillable="true" type="q127:SearchExamRoleDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamRoleProfileListResult" nillable="true" type="q128:ResultBaseOfExamRoleProfileListDtoe6nMv2Ao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryExamRoleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="searchExamRoleDto" nillable="true" type="q129:SearchExamRoleDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryExamRoleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetCountryExamRoleListResult" nillable="true" type="q130:ResultBaseOfCountryExamRoleListDtoe6nMv2Ao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamRoleProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="examRoleProfileDto" nillable="true" type="q131:ExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyExamRoleProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyExamRoleProfileResult" nillable="true" type="q132:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyCountryExamRoleProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffRole" minOccurs="0" name="countryExamRoleDto" nillable="true" type="q133:CountryExamRoleProfileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyCountryExamRoleProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyCountryExamRoleProfileResult" nillable="true" type="q134:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="examRoleProfileId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamRoleProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetExamRoleProfileByIdResult" nillable="true" type="q135:ResultBaseOfExamRoleProfileListDtoe6nMv2Ao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyDictionary">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCurrencyDictionaryResult" nillable="true" type="q136:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="venueDto" nillable="true" type="q137:VenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="CreateVenueResult" nillable="true" type="q138:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="searchVenueDto" nillable="true" type="q139:SearchVenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetVenueListResult" nillable="true" type="q140:ResultBaseOfVenueListEntryDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="venueDto" nillable="true" type="q141:VenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="ModifyVenueResult" nillable="true" type="q142:ResultBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyVenueNameIsExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.Venue" minOccurs="0" name="venueDto" nillable="true" type="q143:VenueDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyVenueNameIsExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyVenueNameIsExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="venueId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/BC.Framework.Wcf.DataContracts" minOccurs="0" name="GetVenueResult" nillable="true" type="q144:ResultBaseOfVenueDtoD1Awih96" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dfe7b7fe-1147-48b4-ae5a-30943bbd0c11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52220/BackOfficePortalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BackofficePortalService.disco" MetadataType="Disco" ID="9e051af2-3231-497a-b16a-353af70d4529" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?disco" />
+    <MetadataFile FileName="BackofficePortalService.xsd" MetadataType="Schema" ID="865c4bf2-f346-4c84-bf36-421dd3ae15e2" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" />
+    <MetadataFile FileName="BackofficePortalService1.xsd" MetadataType="Schema" ID="0b8ebb9a-d11e-4e46-9670-1cb6291c6d90" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd12" />
+    <MetadataFile FileName="BackofficePortalService2.xsd" MetadataType="Schema" ID="042f9ea1-2f15-48c1-85e0-054d1238a825" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BackofficePortalService3.xsd" MetadataType="Schema" ID="09c24f5f-1a6b-4191-9700-d86f6a465d34" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd11" />
+    <MetadataFile FileName="BackofficePortalService4.xsd" MetadataType="Schema" ID="ab1b15b9-43d0-4e76-a412-020c84b32782" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd10" />
+    <MetadataFile FileName="BackofficePortalService5.xsd" MetadataType="Schema" ID="47211050-a2f7-4ac4-9ef4-2224419f8d31" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd8" />
+    <MetadataFile FileName="BackofficePortalService6.xsd" MetadataType="Schema" ID="df3445f2-9077-4a71-b283-28731c3d0ff8" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd7" />
+    <MetadataFile FileName="BackOfficeService.wsdl" MetadataType="Wsdl" ID="3c7737e4-cdca-4b98-826d-91f6d77dddc2" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?wsdl" />
+    <MetadataFile FileName="BackofficePortalService7.xsd" MetadataType="Schema" ID="633dcc1f-b5a4-44d1-99da-5892abf49e18" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd4" />
+    <MetadataFile FileName="BackofficePortalService8.xsd" MetadataType="Schema" ID="b0847669-407f-4a28-ba25-4635a246e258" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BackofficePortalService9.xsd" MetadataType="Schema" ID="ef85b6d8-81ca-402f-bc77-05b8759a14e9" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd9" />
+    <MetadataFile FileName="BackofficePortalService10.xsd" MetadataType="Schema" ID="03f58f46-b94d-4e4a-b2bf-071dc0c822a5" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BackofficePortalService11.xsd" MetadataType="Schema" ID="fe5fded1-442d-479a-ad38-bb0389f59adf" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BackofficePortalService12.xsd" MetadataType="Schema" ID="694d9e9a-e7c5-4863-84f8-8c7dd6823c27" SourceId="1" SourceUrl="http://localhost:52220/BackofficePortalService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

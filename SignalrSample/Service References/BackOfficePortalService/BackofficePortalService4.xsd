@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract.VenueStaffProfile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:52220/BackofficePortalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" />
+  <xs:complexType name="ExamStaffDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AlternativeFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BCStaffId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanTravel" type="xs:int" />
+      <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employed" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployedByBcVenueStaffOnly" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EmployedByThirdParty" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstDateEmployedByVenue" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="xs:int" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsShare" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryDistrict" type="xs:int" />
+      <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondaryDistrict" type="xs:int" />
+      <xs:element minOccurs="0" name="TertiaryDistrict" type="xs:int" />
+      <xs:element minOccurs="0" name="TravelComment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffDto" nillable="true" type="tns:ExamStaffDto" />
+  <xs:complexType name="ArrayOfExamStaffDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffDto" nillable="true" type="tns:ExamStaffDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffDto" nillable="true" type="tns:ArrayOfExamStaffDto" />
+  <xs:complexType name="SearchExamStaffDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/BC.Boss.Services.BackOfficePortalContract" base="q1:SearchBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CentreId" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassportOrIDNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchExamStaffDto" nillable="true" type="tns:SearchExamStaffDto" />
+  <xs:complexType name="ExamStaffListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AlternativeFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employed" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstDateEmployedByVenue" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="xs:int" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" type="xs:int" />
+      <xs:element minOccurs="0" name="PassportOrIDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffListDto" nillable="true" type="tns:ExamStaffListDto" />
+  <xs:complexType name="ArrayOfExamStaffListDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffListDto" nillable="true" type="tns:ExamStaffListDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffListDto" nillable="true" type="tns:ArrayOfExamStaffListDto" />
+  <xs:complexType name="ExamStaffIdentificationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryOfIssue" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="IDType" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PassportOrIDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportOrIDNumberExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PothoIDVerified" type="xs:int" />
+      <xs:element minOccurs="0" name="Visa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VisaExpiryDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffIdentificationDto" nillable="true" type="tns:ExamStaffIdentificationDto" />
+  <xs:complexType name="ExamStaffContactDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" type="xs:int" />
+      <xs:element minOccurs="0" name="EmergencyContactMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmergencyContactTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="HomeContactNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOrZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrCounty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TownOrCity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffContactDto" nillable="true" type="tns:ExamStaffContactDto" />
+  <xs:complexType name="ExamStaffTrainingAndCertificationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildProtection" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ChildProtectionComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildProtectionExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DPA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DPAComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DPAExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocumentFraudDetection" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentFraudDetectionComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentFraudDetectionExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="FacialComparison" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FacialComparisonComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacialComparisonExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FireMarShall" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FireMarShallComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FireMarShallExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstAid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstAidComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstAidExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GeneralInvigilator" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GeneralInvigilatorComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneralInvigilatorExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IAMOperation" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IAMOperationComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IAMOperationExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IWASTraining" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IWASTrainingComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IWASTrainingExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffTrainingAndCertificationDto" nillable="true" type="tns:ExamStaffTrainingAndCertificationDto" />
+  <xs:complexType name="ExamStaffCertificationAndDocumentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfidentialityAgreement" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfidentialityAgreementComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConfidentialityAgreementExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ConflictOfInterest" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConflictOfInterestComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConflictOfInterestExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorApplication" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorApplicationComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorApplicationExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorCodeOfPractice" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorCodeOfPracticeComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IELTSInvigilatorCodeOfPracticeExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="References" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ReferencesComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferencesExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidWorkPermit" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidWorkPermitComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidWorkPermitExpiryDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffCertificationAndDocumentDto" nillable="true" type="tns:ExamStaffCertificationAndDocumentDto" />
+  <xs:complexType name="ExamStaffSecurityClearanceDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DBSClearance" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IssuingCountry" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffSecurityClearanceDto" nillable="true" type="tns:ExamStaffSecurityClearanceDto" />
+  <xs:complexType name="ExamStaffFinanceDetailDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankAccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAddressOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAddressTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankContactNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankCountry" type="xs:int" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankPostOrZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankTownOrCity" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="IBANNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SWIFTOrBICNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffFinanceDetailDto" nillable="true" type="tns:ExamStaffFinanceDetailDto" />
+  <xs:complexType name="ArrayOfExamStaffFinanceDetailDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffFinanceDetailDto" nillable="true" type="tns:ExamStaffFinanceDetailDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffFinanceDetailDto" nillable="true" type="tns:ArrayOfExamStaffFinanceDetailDto" />
+  <xs:complexType name="ArrayOfExamStaffContactDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffContactDto" nillable="true" type="tns:ExamStaffContactDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffContactDto" nillable="true" type="tns:ArrayOfExamStaffContactDto" />
+  <xs:complexType name="ArrayOfExamStaffTrainingAndCertificationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffTrainingAndCertificationDto" nillable="true" type="tns:ExamStaffTrainingAndCertificationDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffTrainingAndCertificationDto" nillable="true" type="tns:ArrayOfExamStaffTrainingAndCertificationDto" />
+  <xs:complexType name="ArrayOfExamStaffCertificationAndDocumentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffCertificationAndDocumentDto" nillable="true" type="tns:ExamStaffCertificationAndDocumentDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffCertificationAndDocumentDto" nillable="true" type="tns:ArrayOfExamStaffCertificationAndDocumentDto" />
+  <xs:complexType name="ArrayOfExamStaffSecurityClearanceDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffSecurityClearanceDto" nillable="true" type="tns:ExamStaffSecurityClearanceDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffSecurityClearanceDto" nillable="true" type="tns:ArrayOfExamStaffSecurityClearanceDto" />
+  <xs:complexType name="ArrayOfExamStaffIdentificationDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffIdentificationDto" nillable="true" type="tns:ExamStaffIdentificationDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffIdentificationDto" nillable="true" type="tns:ArrayOfExamStaffIdentificationDto" />
+  <xs:complexType name="ArrayOfExamStaffRoleProfileDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamStaffRoleProfileDto" nillable="true" type="tns:ExamStaffRoleProfileDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamStaffRoleProfileDto" nillable="true" type="tns:ArrayOfExamStaffRoleProfileDto" />
+  <xs:complexType name="ExamStaffRoleProfileDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryExamRoleProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamStaffId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamStaffRoleProfileDto" nillable="true" type="tns:ExamStaffRoleProfileDto" />
+</xs:schema>
